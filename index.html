@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow">
+<title>ZUG Portfolio · Acesso</title>
+<link rel="icon" href="logo.png">
+<style>
+:root{--bg:#061B33;--card:#0E2D55;--line:rgba(255,255,255,.12);--txt:#D4DAE4;--head:#fff;--mute:#7A8499;--acc:#3FD1E0;--acc2:#A0D720;--err:#F2667A;--ok:#7EE0A0}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:radial-gradient(1200px 600px at 80% -10%,#0A2547 0%,var(--bg) 60%);color:var(--txt);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px}
+main{width:100%;max-width:400px}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.brand img{height:40px;width:auto}
+.brand div{display:flex;flex-direction:column}
+.brand strong{color:var(--head);font-size:18px;letter-spacing:.2px}
+.brand span{color:var(--mute);font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+h1{margin:0 0 4px;color:var(--head);font-size:20px;font-weight:650}
+p.sub{margin:0 0 20px;color:var(--mute);font-size:13px}
+label{display:block;font-size:12px;color:var(--mute);margin:14px 0 6px;font-weight:600;letter-spacing:.3px}
+input{width:100%;padding:11px 12px;border-radius:8px;border:1px solid #2A4A73;background:#081830;color:#fff;font:inherit}
+input:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+input[readonly]{color:var(--mute)}
+button{margin-top:20px;width:100%;padding:11px;border:0;border-radius:8px;background:var(--acc2);color:#061B33;font:inherit;font-weight:700;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+.msg{min-height:20px;margin-top:12px;font-size:13px;color:var(--err)}
+.msg.ok{color:var(--ok)}
+.hint{font-size:12px;color:var(--mute);margin-top:6px}
+footer{margin-top:18px;text-align:center;color:var(--mute);font-size:12px}
+[hidden]{display:none!important}
+.prog{height:4px;background:#081830;border-radius:4px;overflow:hidden;margin:0 0 6px}.prog div{height:100%;width:0;background:var(--acc);transition:width .2s}
+</style>
+</head>
+<body>
+<main>
+  <div class="brand"><img src="logo.png" alt="ZUG Power"><div><strong>ZUG Portfolio</strong><span>Gestão comercial</span></div></div>
+
+  <section class="card" id="v-login">
+    <h1>Iniciar sessão</h1>
+    <p class="sub">Acesso reservado a utilizadores autorizados.</p>
+    <div class="prog" id="prog" hidden><div></div></div>
+    <form id="f-login" autocomplete="on">
+      <label for="l-email">Email</label>
+      <input id="l-email" name="email" type="email" autocomplete="username" required>
+      <label for="l-pw">Palavra-passe</label>
+      <input id="l-pw" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit">Entrar</button>
+      <div class="msg" id="m-login" role="alert"></div>
+    </form>
+  </section>
+
+    <footer>ZUG Power Portugal</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
